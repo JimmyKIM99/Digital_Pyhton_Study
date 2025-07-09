@@ -1,0 +1,19 @@
+* {
+  margin-right: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+  background: #caa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container > #outer {
+  width: 807px;
+  height: 544px;
+  background: url(./contents/outerbox.png);
+}
