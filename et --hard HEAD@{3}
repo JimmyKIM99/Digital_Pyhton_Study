@@ -1,0 +1,38 @@
+[33mb1f4c0c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: commit: 메시지 작성
+[33mccb4442[m HEAD@{1}: reset: moving to origin/master
+[33m331f158[m HEAD@{2}: pull --tags origin master: Merge made by the 'ort' strategy.
+[33m1c8289e[m HEAD@{3}: commit: 250813
+[33mcd55204[m HEAD@{4}: commit: Remove sensitive file
+[33mc5f4a79[m HEAD@{5}: commit: 250812
+[33m7357caf[m HEAD@{6}: commit: 250811
+[33m902de9d[m HEAD@{7}: commit: 250807
+[33m737ed11[m HEAD@{8}: commit: 250806
+[33m1087ca2[m HEAD@{9}: commit: 250805
+[33m557209f[m HEAD@{10}: commit: 250731
+[33ma8cf6c0[m HEAD@{11}: commit: 250730
+[33maa3d33a[m HEAD@{12}: commit: 250729
+[33m9d7c591[m HEAD@{13}: commit: 250725
+[33ma00cab3[m HEAD@{14}: commit: 250724
+[33ma2112d7[m HEAD@{15}: Branch: renamed refs/heads/temp_branch to refs/heads/master
+[33ma2112d7[m HEAD@{17}: commit (initial): Initial clean commit
+[33m5ab12bf[m HEAD@{18}: commit (amend): 250724
+[33m285134d[m HEAD@{19}: commit: 250724
+[33mce8d293[m HEAD@{20}: commit: Remove checkpoint files
+[33mbac8f3e[m HEAD@{21}: commit: 250724
+[33m04fb7d5[m HEAD@{22}: commit: Remove secret-containing checkpoint file
+[33m6e46ed4[m HEAD@{23}: commit: 250724
+[33m993ce81[m HEAD@{24}: commit: 250724
+[33ma7a6003[m HEAD@{25}: commit: Remove checkpoint files
+[33me158f9a[m HEAD@{26}: commit (amend): 250724
+[33meb54555[m HEAD@{27}: commit: 250724
+[33mc225d64[m HEAD@{28}: commit (amend): 250723
+[33m55617f2[m HEAD@{29}: commit: 250723
+[33m69e1eeb[m HEAD@{30}: commit: Remove checkpoint files and update .gitignore
+[33m487a3ea[m HEAD@{31}: commit: Remove checkpoint files and update .gitignore
+[33m1b55dd8[m HEAD@{32}: commit: Remove checkpoint files and update .gitignore
+[33m8f81081[m HEAD@{33}: commit: Remove checkpoint files and update .gitignore
+[33m6a0c197[m HEAD@{34}: commit: 250723
+[33m8b24f25[m HEAD@{35}: commit: 250723
+[33mbe9e15c[m HEAD@{36}: commit: 250723
+[33m979faea[m HEAD@{37}: commit: 250723
+[33md72ff9f[m HEAD@{38}: clone: from https://github.com/JimmyKIM99/Digital_Pyhton_Study.git
