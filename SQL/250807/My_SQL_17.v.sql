@@ -65,6 +65,7 @@ ON products.product_id = reviews.product_id
 GROUP BY product_name
 ORDER BY RT DESC;
 
+<<<<<<< HEAD
 SELECT count(*)
 FROM orders
 -- WHERE order_date >= (CURDATE() - 30);
@@ -141,3 +142,8 @@ FROM reviews R
 JOIN products P ON R.product_id = P.product_id
 GROUP BY R.product_id
 HAVING AVG(rating) >= 4.5;
+=======
+SELECT SUM(quantity)
+FROM orders
+WHERE order_date >= (CURDATE() - 30);
+>>>>>>> b1f4c0cfca8de8859c2b3e902605096c541631e9
