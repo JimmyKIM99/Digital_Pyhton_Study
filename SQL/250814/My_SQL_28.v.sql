@@ -41,3 +41,4 @@ SELECT film_id FROM film
 UNION
 SELECT film_id FROM film_category;
 
+START TRANSACTION;
