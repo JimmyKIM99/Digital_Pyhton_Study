@@ -656,15 +656,9 @@ JOIN film_category FC USING(film_id)
 JOIN category CA USING(category_id)
 GROUP BY 
 	C.customer_id,
-    C.first_name,
-    C.last_name,
-    CA.category_id,
-    CA.name) AS T
+    CA.category_id) AS T
 WHERE T.rn = 1
 ORDER BY T.customer_id;
-
-
-
 
 SELECT COUNT(I.inventory_id) FROM customer
 JOIN rental R USING(customer_id)
@@ -672,4 +666,5 @@ JOIN inventory I USING(inventory_id)
 JOIN film_category FC USING(film_id)
 JOIN category CA USING(category_id)
 GROUP BY category_id;
+
 
