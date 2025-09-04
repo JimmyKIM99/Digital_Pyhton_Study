@@ -125,3 +125,44 @@ SELECT
 FROM rental R
 JOIN inventory I USING(inventory_id);
 
+#Sakila DB를 참고해서, 가장 많은 영화를 대여한 고객(*단,  가장 많은 영화의 기준 -> 동일한 영화를 반복해서 대여한 경우의 수는 제외, 오직 서로 다른 영화를 대여했다는 기준으로만) 을 찾아내고, 
+# 해당 고객이 대여한 영화 갯수를 찾아주세요. 또한 해당 고객이 대여한 영화가 가장 많이 속한 카테고리(*단, 이때에는 동일한 영화를 반복해서 대여한 경우의 수도 포함)도 찾아주세요.
+SELECT * FROM film; #film_id
+SELECT * FROM film_category; #film_id, cateogry_id
+SELECT * FROM category; # category_id
+SELECT * FROM rental; # rental_id, inventory_id, customer_id
+SELECT * FROM inventory; # inventory_id, film_id
+SELECT * FROM payment; # payment_id, staff_id
+SELECT * FROM film; #film_id
+SELECT * FROM inventory; # inventory_id, film_id
+SELECT * FROM customer; #customer_id, address_id, store_id
+SELECT * FROM store; #store_id, address_id
+SELECT * FROM staff; #staff_id
+
+
+
+SELECT TB.customer_id, TB.Total_rental1, total_rent, TB.TT, TB.TA-- , TB.first_name, TB.last_name
+FROM
+(SELECT 
+	DISTINCT C.customer_id,
+--     DISTINCT C.first_name,
+--     DISTINCT C.last_name,
+	COUNT(*) OVER (PARTITION BY C.customer_id) AS total_rent,
+	FIRST_VALUE(COUNT(*)) OVER(PARTITION BY C.customer_id, CA.category_id  ORDER BY COUNT(*) DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) TT,
+	FIRST_VALUE(CA.name) OVER(PARTITION BY CA.category_id  ORDER BY COUNT(*) DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) TA,
+	DENSE_RANK() OVER (PARTITION BY C.customer_id ORDER BY COUNT(*) DESC) Total_rental1
+-- 	COUNT(*) OVER(PARTITION BY C.customer_id) AS Total_rental2
+--     CA.name
+FROM customer C
+JOIN rental R USING(customer_id)
+JOIN inventory I USING(inventory_id)
+JOIN film_category F USING(film_id)
+JOIN category CA USING(category_id)
+GROUP BY C.customer_id, F.film_id, CA.category_id) AS TB
+WHERE TB.Total_rental1 = 1
+-- ORDER BY TB.Total_rental DESC;
+
+-- ORDER BY Total_rental1 DESC
+-- LIMIT 1;
+
+
