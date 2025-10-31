@@ -1,0 +1,2 @@
+﻿형태소 분석기,요약파일,데이터파일,폰트패밀리,워드클라우드폰트,밴드 확장(±원),가중치(핵심/확장),출력 폴더
+KoNLPy/Okt,스윗스팟_분석_요약_통합_최저4000제외.csv,분석사용데이터_통합.csv,['Malgun Gothic'],C:\Windows\Fonts\malgun.ttf,1500,1.0/0.6,C:\Users\sagej\Digital_Pyhton_Study\형태소_도시락\out
